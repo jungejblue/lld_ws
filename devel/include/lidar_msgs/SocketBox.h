@@ -206,25 +206,16 @@ struct Printer< ::lidar_msgs::SocketBox_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::lidar_msgs::SocketBox_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "num_of_box: ";
     Printer<int32_t>::stream(s, indent + "  ", v.num_of_box);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "box_info: ";
-    if (v.box_info.empty() || false)
-      s << "[";
+    s << indent << "box_info[]" << std::endl;
     for (size_t i = 0; i < v.box_info.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::lidar_msgs::BoxInfo_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.box_info[i]);
+      s << indent << "  box_info[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::lidar_msgs::BoxInfo_<ContainerAllocator> >::stream(s, indent + "    ", v.box_info[i]);
     }
-    if (v.box_info.empty() || false)
-      s << "]";
   }
 };
 

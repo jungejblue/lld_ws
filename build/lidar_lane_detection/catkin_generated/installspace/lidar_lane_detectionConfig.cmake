@@ -67,14 +67,14 @@ set(lidar_lane_detection_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(lidar_lane_detection_SOURCE_PREFIX /home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION)
-  set(lidar_lane_detection_DEVEL_PREFIX /home/jungejblue/lld_ws/devel)
+  set(lidar_lane_detection_SOURCE_PREFIX /home/heven/lld_ws/src/LiDAR-LANE-DETECTION)
+  set(lidar_lane_detection_DEVEL_PREFIX /home/heven/lld_ws/devel)
   set(lidar_lane_detection_INSTALL_PREFIX "")
   set(lidar_lane_detection_PREFIX ${lidar_lane_detection_DEVEL_PREFIX})
 else()
   set(lidar_lane_detection_SOURCE_PREFIX "")
   set(lidar_lane_detection_DEVEL_PREFIX "")
-  set(lidar_lane_detection_INSTALL_PREFIX /home/jungejblue/lld_ws/install)
+  set(lidar_lane_detection_INSTALL_PREFIX /home/heven/lld_ws/install)
   set(lidar_lane_detection_PREFIX ${lidar_lane_detection_INSTALL_PREFIX})
 endif()
 
@@ -118,7 +118,7 @@ endif()
 
 set(libraries "")
 foreach(library ${libraries})
-  # keep build configuration keywords, generator expressions, target names, and absolute libraries as-is
+  # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
     list(APPEND lidar_lane_detection_LIBRARIES ${library})
   elseif(${library} MATCHES "^-l")
@@ -146,8 +146,6 @@ foreach(library ${libraries})
       target_link_options("${interface_target_name}" INTERFACE "${library}")
     endif()
     list(APPEND lidar_lane_detection_LIBRARIES "${interface_target_name}")
-  elseif(${library} MATCHES "^\\$<")
-    list(APPEND lidar_lane_detection_LIBRARIES ${library})
   elseif(TARGET ${library})
     list(APPEND lidar_lane_detection_LIBRARIES ${library})
   elseif(IS_ABSOLUTE ${library})
@@ -156,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jungejblue/lld_ws/install/lib;/home/jungejblue/lld_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/heven/lld_ws/install/lib;/home/heven/lld_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

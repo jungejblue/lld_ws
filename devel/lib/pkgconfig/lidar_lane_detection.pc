@@ -1,8 +1,8 @@
-prefix=/home/jungejblue/lld_ws/devel
+prefix=/home/heven/lld_ws/devel
 
 Name: lidar_lane_detection
 Description: Description of lidar_lane_detection
 Version: 0.0.0
-Cflags: -I/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include
+Cflags: -I/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/include
 Libs: -L${prefix}/lib 
 Requires: pcl_conversions pcl_ros roscpp std_msgs visualization_msgs lidar_msgs

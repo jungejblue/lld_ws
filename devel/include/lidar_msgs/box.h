@@ -224,28 +224,16 @@ struct Printer< ::lidar_msgs::box_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::lidar_msgs::box_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "x_min: ";
     Printer<float>::stream(s, indent + "  ", v.x_min);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "y_min: ";
     Printer<float>::stream(s, indent + "  ", v.y_min);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "z_min: ";
     Printer<float>::stream(s, indent + "  ", v.z_min);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "x_max: ";
     Printer<float>::stream(s, indent + "  ", v.x_max);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "y_max: ";
     Printer<float>::stream(s, indent + "  ", v.y_max);
-    if (true || !indent.empty())
-      s << std::endl;
     s << indent << "z_max: ";
     Printer<float>::stream(s, indent + "  ", v.z_max);
   }

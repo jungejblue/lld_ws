@@ -194,9 +194,8 @@ struct Printer< ::lidar_msgs::BoxInfo_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::lidar_msgs::BoxInfo_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "box: ";
+    s << std::endl;
     Printer< ::lidar_msgs::box_<ContainerAllocator> >::stream(s, indent + "  ", v.box);
   }
 };

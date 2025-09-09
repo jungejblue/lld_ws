@@ -1,0 +1,8 @@
+[01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::OS1PointCloudCallback(const ConstPtr&)[m[K’:
+[01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:72:42:[m[K [01;31m[Kerror: [m[K‘[01m[KcreateLaneLineMarker[m[K’ was not declared in this scope
+   72 |   visualization_msgs::Marker lane_line = [01;31m[KcreateLaneLineMarker[m[K(
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/lane_detection.dir/build.make:90: CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:2731: CMakeFiles/lane_detection.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

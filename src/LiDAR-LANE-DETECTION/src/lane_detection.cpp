@@ -26,7 +26,7 @@ bool LaneDetector::init()
 
   lane_line_left_pub_  = nh_.advertise<visualization_msgs::Marker>("/lane_line_left", 1);
   lane_line_right_pub_ = nh_.advertise<visualization_msgs::Marker>("/lane_line_right", 1);
-  
+
   return true;
 }
 
@@ -97,6 +97,94 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
 
   lane_pub_.publish(ros_output_);
   origin_pub_.publish(origin_point_cloud);
+
+  pcl::PointCloud<pcl::PointXYZI>::Ptr left_lane(new pcl::PointCloud<pcl::PointXYZI>());
+  pcl::PointCloud<pcl::PointXYZI>::Ptr right_lane(new pcl::PointCloud<pcl::PointXYZI>());
+  splitCloudLeftRight(cloud_filtered_ptr, left_lane, right_lane, 0.6f); // y=±0.6m 띠는 제외
+
+  // 2) x 기준 정렬 & 샘플 간격 간단히 정리
+  sortByXAndThin(left_lane, 0.2f);
+  sortByXAndThin(right_lane, 0.2f);
+
+  // 3) 마커 생성 (색상/두께는 취향대로)
+  auto left_marker = createLaneLineMarker(left_lane, "os_sensor", "lane", 0, 0.0f, 1.0f, 0.0f, 0.07);
+  auto right_marker = createLaneLineMarker(right_lane, "os_sensor", "lane", 1, 1.0f, 0.8f, 0.0f, 0.07);
+
+  // 포인트가 2개 이상일 때만 퍼블리시(한 점이면 선이 안 보임)
+  if (left_marker.points.size() >= 2)  lane_line_left_pub_.publish(left_marker);
+  if (right_marker.points.size() >= 2) lane_line_right_pub_.publish(right_marker);
+}
+
+visualization_msgs::Marker LaneDetector::createLaneLineMarker(
+    const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,
+    const std::string& frame_id,
+    const std::string& ns,
+    int id,
+    float r, float g, float b,
+    double width)
+{
+  visualization_msgs::Marker m;
+  m.header.frame_id = frame_id;
+  m.header.stamp = ros::Time::now();
+  m.ns = ns;
+  m.id = id;
+  m.type = visualization_msgs::Marker::LINE_STRIP;
+  m.action = visualization_msgs::Marker::ADD;
+
+  m.scale.x = 0.1;     // 선 두께 (m)
+  m.color.r = r; m.color.g = g; m.color.b = b; m.color.a = 1.0;
+
+  m.pose.orientation.w = 1.0; // 기본
+
+  m.points.reserve(cloud->size());
+  for (const auto& pt : cloud->points) {
+    geometry_msgs::Point p;
+    p.x = pt.x; p.y = pt.y; p.z = pt.z;
+    m.points.push_back(p);
+  }
+
+  // 라인이 안 보이지 않게 적어도 2포인트 이상일 때만 쓰는 게 좋아요.
+  return m;
+}
+
+void LaneDetector::splitCloudLeftRight(
+    const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,
+    pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,
+    pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,
+    float y_gap)
+{
+  left_out->clear();
+  right_out->clear();
+  left_out->reserve(in->size());
+  right_out->reserve(in->size());
+
+  for (const auto& p : in->points) {
+    if (p.y >  y_gap) left_out->push_back(p);     // 좌측
+    else if (p.y < -y_gap) right_out->push_back(p); // 우측
+    // 중앙(y≈0)은 버림 — 필요시 중앙 차선 따로 만들면 됨
+  }
+}
+
+void LaneDetector::sortByXAndThin(
+    pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,
+    float min_dx)
+{
+  if (cloud->empty()) return;
+
+  std::sort(cloud->points.begin(), cloud->points.end(),
+            [](const pcl::PointXYZI& a, const pcl::PointXYZI& b){ return a.x < b.x; });
+
+  pcl::PointCloud<pcl::PointXYZI> thinned;
+  thinned.points.reserve(cloud->points.size());
+
+  float last_x = std::numeric_limits<float>::lowest();
+  for (const auto& p : cloud->points) {
+    if (thinned.points.empty() || (p.x - last_x) >= min_dx) {
+      thinned.points.push_back(p);
+      last_x = p.x;
+    }
+  }
+  *cloud = thinned;
 }
 
 pcl::PointCloud<pcl::PointXYZI>::Ptr LaneDetector::FilterCloud(const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,

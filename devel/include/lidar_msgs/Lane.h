@@ -217,25 +217,17 @@ struct Printer< ::lidar_msgs::Lane_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::lidar_msgs::Lane_<ContainerAllocator>& v)
   {
-    if (false || !indent.empty())
-      s << std::endl;
     s << indent << "header: ";
+    s << std::endl;
     Printer< ::std_msgs::Header_<ContainerAllocator> >::stream(s, indent + "  ", v.header);
-    if (true || !indent.empty())
-      s << std::endl;
-    s << indent << "points: ";
-    if (v.points.empty() || false)
-      s << "[";
+    s << indent << "points[]" << std::endl;
     for (size_t i = 0; i < v.points.size(); ++i)
     {
-      if (false && i > 0)
-        s << ", ";
-      else if (!false)
-        s << std::endl << indent << "  -";
-      Printer< ::lidar_msgs::PointStamped_<ContainerAllocator> >::stream(s, false ? std::string() : indent + "    ", v.points[i]);
+      s << indent << "  points[" << i << "]: ";
+      s << std::endl;
+      s << indent;
+      Printer< ::lidar_msgs::PointStamped_<ContainerAllocator> >::stream(s, indent + "    ", v.points[i]);
     }
-    if (v.points.empty() || false)
-      s << "]";
   }
 };
 
