@@ -1,0 +1,12 @@
+<launch>
+  <node name="lane_detection" pkg="lidar_lane_detection" type="lane_detection" respawn="true" output="screen">
+    <remap from="/input" to="/velodyne_points"/>
+  </node>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="base_to_os_sensor"
+      args="0 0 0 0 0 0 velodyne os_sensor"/>
+  
+  <arg name="rviz_config" default="$(find lidar_lane_detection)/lane.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true" />
+  
+</launch>

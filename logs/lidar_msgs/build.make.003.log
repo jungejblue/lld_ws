@@ -1,0 +1,22 @@
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_Curb
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_SocketBox
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_PointStamped
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_BoxInfo
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_Lane
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_box
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[ 21%] Built target lidar_msgs_generate_messages_eus
+[ 40%] Built target lidar_msgs_generate_messages_nodejs
+[ 62%] Built target lidar_msgs_generate_messages_py
+[100%] Built target lidar_msgs_generate_messages_cpp
+[100%] Built target lidar_msgs_generate_messages_lisp
+[100%] Built target lidar_msgs_generate_messages
