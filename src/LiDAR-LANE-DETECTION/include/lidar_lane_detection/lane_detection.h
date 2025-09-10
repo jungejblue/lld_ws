@@ -66,7 +66,7 @@ public:
   std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr,pcl::PointCloud<pcl::PointXYZI>::Ptr> SeparateClouds(const pcl::PointIndices::Ptr& inliers, const  pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud);
   std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> SegmentPlane(const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud, int maxIterations, float distanceThreshold);
   visualization_msgs::Marker createLaneLineMarker(const pcl::PointCloud<pcl::PointXYZI>::Ptr& lane_pts,const std::string& frame_id,const std::string& ns, int id,float r, float g, float b,double width);
-  void splitCloudLeftRight(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,float deadband_y = 0.2f);
+  void splitCloudLeftRight(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,float y_gap,float y_band);
   void sortByXAndThin(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,float step);
 
 private:

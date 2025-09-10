@@ -1,0 +1,102 @@
+[  0%] Built target pcl_msgs_generate_messages_cpp
+[  0%] Built target lidar_msgs_generate_messages_py
+[  0%] Built target pcl_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target pcl_msgs_generate_messages_lisp
+[  0%] Built target pcl_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target pcl_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
+[  0%] Built target pcl_ros_gencfg
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  0%] Built target nodelet_generate_messages_eus
+[  0%] Built target nodelet_generate_messages_cpp
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[  0%] Built target bond_generate_messages_cpp
+[  0%] Built target nodelet_generate_messages_lisp
+[  0%] Built target nodelet_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_gencfg
+[  0%] Built target std_srvs_generate_messages_cpp
+[  0%] Built target bond_generate_messages_lisp
+[  0%] Built target bond_generate_messages_eus
+[  0%] Built target nodelet_generate_messages_py
+[  0%] Built target bond_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_lisp
+[  0%] Built target bond_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_eus
+[  0%] Built target nodelet_topic_tools_gencfg
+[  0%] Built target topic_tools_generate_messages_eus
+[  0%] Built target std_srvs_generate_messages_nodejs
+[  0%] Built target topic_tools_generate_messages_cpp
+[  0%] Built target topic_tools_generate_messages_lisp
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target topic_tools_generate_messages_py
+[  0%] Built target topic_tools_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target lidar_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_eus
+[  0%] Built target lidar_msgs_generate_messages_eus
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_py
+[  0%] Built target lidar_msgs_generate_messages_lisp
+[  0%] Built target lidar_msgs_generate_messages_nodejs
+[ 33%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o[0m
+[01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::OS1PointCloudCallback(const ConstPtr&)[m[K’:
+[01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:106:23:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kpcl::PointCloud<pcl::PointXYZI>[m[K’ to ‘[01m[Kconst Ptr&[m[K’ {aka ‘[01m[Kconst boost::shared_ptr<pcl::PointCloud<pcl::PointXYZI> >&[m[K’}
+  106 |   splitCloudLeftRight([01;31m[K*cloud_filtered_ptr[m[K, left_lane, right_lane, y_gap, y_band);
+      |                       [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                       [01;31m[K|[m[K
+      |                       [01;31m[Kpcl::PointCloud<pcl::PointXYZI>[m[K
+In file included from [01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/home/heven/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:69:72:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid LaneDetector::splitCloudLeftRight(const Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, float, float)[m[K’
+   69 |   void splitCloudLeftRight([01;36m[Kconst pcl::PointCloud<pcl::PointXYZI>::Ptr& in[m[K,pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,float y_gap,float y_band);
+      |                            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+make[2]: *** [CMakeFiles/lane_detection.dir/build.make:90: CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2731: CMakeFiles/lane_detection.dir/all] Error 2
+make: *** [Makefile:146: all] Error 2

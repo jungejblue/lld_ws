@@ -59,7 +59,7 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
   pcl::PassThrough<pcl::PointXYZI> pass;
   pass.setInputCloud(segment_cloud.second);
   pass.setFilterFieldName("intensity");
-  pass.setFilterLimits(75, 110);
+  pass.setFilterLimits(70, 130);
   // pass.setFilterLimits(125, 150);
   pass.setFilterLimitsNegative(false);
   pass.filter(*cloud_filtered_ptr);
@@ -100,11 +100,14 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
 
   pcl::PointCloud<pcl::PointXYZI>::Ptr left_lane(new pcl::PointCloud<pcl::PointXYZI>());
   pcl::PointCloud<pcl::PointXYZI>::Ptr right_lane(new pcl::PointCloud<pcl::PointXYZI>());
-  splitCloudLeftRight(cloud_filtered_ptr, left_lane, right_lane, 0.6f); // y=±0.6m 띠는 제외
+
+  const float y_gap  = 1.2f;
+  const float y_band = 0.8f;
+  splitCloudLeftRight(cloud_filtered_ptr, left_lane, right_lane, y_gap, y_band);
 
   // 2) x 기준 정렬 & 샘플 간격 간단히 정리
-  sortByXAndThin(left_lane, 0.2f);
-  sortByXAndThin(right_lane, 0.2f);
+  sortByXAndThin(left_lane, 0.1f);
+  sortByXAndThin(right_lane, 0.1f);
 
   // 3) 마커 생성 (색상/두께는 취향대로)
   auto left_marker = createLaneLineMarker(left_lane, "os_sensor", "lane", 0, 0.0f, 1.0f, 0.0f, 0.07);
@@ -131,7 +134,7 @@ visualization_msgs::Marker LaneDetector::createLaneLineMarker(
   m.type = visualization_msgs::Marker::LINE_STRIP;
   m.action = visualization_msgs::Marker::ADD;
 
-  m.scale.x = 0.1;     // 선 두께 (m)
+  m.scale.x = width;     // 선 두께 (m)
   m.color.r = r; m.color.g = g; m.color.b = b; m.color.a = 1.0;
 
   m.pose.orientation.w = 1.0; // 기본
@@ -151,7 +154,7 @@ void LaneDetector::splitCloudLeftRight(
     const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,
     pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,
     pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,
-    float y_gap)
+    float y_gap, float y_band)
 {
   left_out->clear();
   right_out->clear();
@@ -159,9 +162,14 @@ void LaneDetector::splitCloudLeftRight(
   right_out->reserve(in->size());
 
   for (const auto& p : in->points) {
-    if (p.y >  y_gap) left_out->push_back(p);     // 좌측
-    else if (p.y < -y_gap) right_out->push_back(p); // 우측
-    // 중앙(y≈0)은 버림 — 필요시 중앙 차선 따로 만들면 됨
+    // 좌:  y_gap < y <= y_gap + y_band
+    if ( (p.y > y_gap) && (p.y <= y_gap+y_band) ) {
+      left_out->push_back(p);
+    }
+    // 우: -y_gap - y_band <= y < -y_gap
+    else if ( (p.y >= -y_gap-y_band) && (p.y <  -y_gap) ) {
+      right_out->push_back(p);
+    }
   }
 }
 
