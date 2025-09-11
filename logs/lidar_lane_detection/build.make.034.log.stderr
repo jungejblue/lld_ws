@@ -1,0 +1,32 @@
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::OS1PointCloudCallback(const ConstPtr&)[m[K’:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:106:22:[m[K [01;31m[Kerror: [m[K‘[01m[KcreateLaneLineMarker[m[K’ was not declared in this scope
+  106 |   auto left_marker = [01;31m[KcreateLaneLineMarker[m[K(left_lane, "os_sensor", "lane", 0, 0.0f, 1.0f, 0.0f, 0.07);
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K At global scope:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:241:28:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvisualization_msgs::Marker LaneDetector::createLaneLineMarker(const Ptr&, const string&, const string&, int, float, float, float, double)[m[K’
+  241 | visualization_msgs::Marker [01;31m[KLaneDetector[m[K::createLaneLineMarker(
+      |                            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:241:28:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvisualization_msgs::Marker LaneDetector::createLaneLineMarker(const Ptr&, const string&, const string&, int, float, float, float, double)[m[K’
+In file included from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:54:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LaneDetector[m[K’ defined here
+   54 | class [01;36m[KLaneDetector[m[K
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:272:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LaneDetector::splitCloudLeftRight(const Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, float, float)[m[K’
+  272 | void [01;31m[KLaneDetector[m[K::splitCloudLeftRight(
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:272:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LaneDetector::splitCloudLeftRight(const Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, float, float)[m[K’
+In file included from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:54:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LaneDetector[m[K’ defined here
+   54 | class [01;36m[KLaneDetector[m[K
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:295:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LaneDetector::sortByXAndThin(pcl::PointCloud<pcl::PointXYZI>::Ptr&, float)[m[K’
+  295 | void [01;31m[KLaneDetector[m[K::sortByXAndThin(
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:295:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LaneDetector::sortByXAndThin(pcl::PointCloud<pcl::PointXYZI>::Ptr&, float)[m[K’
+In file included from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:54:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LaneDetector[m[K’ defined here
+   54 | class [01;36m[KLaneDetector[m[K
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/lane_detection.dir/build.make:76: CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o] 오류 1
+make[1]: *** [CMakeFiles/Makefile2:2205: CMakeFiles/lane_detection.dir/all] 오류 2
+make: *** [Makefile:141: all] 오류 2

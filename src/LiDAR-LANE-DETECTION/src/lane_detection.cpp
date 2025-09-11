@@ -36,14 +36,8 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
   // Convert point cloud to PCL native point cloud
   pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_ptr(new pcl::PointCloud<pcl::PointXYZI>);
   pcl::PointCloud<pcl::PointXYZI>::Ptr cloud_filtered_ptr(new pcl::PointCloud<pcl::PointXYZI>);
-
+  
   pcl::fromROSMsg(*cloud_msgs, *cloud_ptr);
-
-  // for(int i = 0; i < cloud_ptr->size(); i++)
-  // {
-  //   cloud_ptr->points[i].z += OS1_HEIGHT;
-  // }
-  //pcl::copyPointCloud(*cloud_ptr, *cloud_filtered_ptr);
 
   constexpr float kFilterResolution = 0.2;    // 0.2 -> voxel leaf size
   //                               x    y     z
@@ -54,16 +48,13 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
   constexpr int kMaxIterations = 1000;         // 1000
   constexpr float kDistanceThreshold = 0.3;
   auto segment_cloud = SegmentPlane(filter_cloud, kMaxIterations, kDistanceThreshold);
-                                  // filter_cloud
                                   
   pcl::PassThrough<pcl::PointXYZI> pass;
   pass.setInputCloud(segment_cloud.second);
   pass.setFilterFieldName("intensity");
   pass.setFilterLimits(70, 130);
-  // pass.setFilterLimits(125, 150);
   pass.setFilterLimitsNegative(false);
   pass.filter(*cloud_filtered_ptr);
-  // pcl::copyPointCloud(*segment_cloud.second, *cloud_filtered_ptr);
 
   cout << "lane size: " << cloud_filtered_ptr->size() << endl;
   auto lane_msgs = lidar_msgs::Lane();
@@ -98,24 +89,153 @@ void LaneDetector::OS1PointCloudCallback(const sensor_msgs::PointCloud2::ConstPt
   lane_pub_.publish(ros_output_);
   origin_pub_.publish(origin_point_cloud);
 
-  pcl::PointCloud<pcl::PointXYZI>::Ptr left_lane(new pcl::PointCloud<pcl::PointXYZI>());
-  pcl::PointCloud<pcl::PointXYZI>::Ptr right_lane(new pcl::PointCloud<pcl::PointXYZI>());
+  // 2. 클러스터링으로 노이즈 제거
+  pcl::PointCloud<pcl::PointXYZI>::Ptr clustered_cloud(new pcl::PointCloud<pcl::PointXYZI>);
+  clusterAndFilter(cloud_filtered_ptr, clustered_cloud);
+  
+  // 3. 동적 좌우 분할
+  pcl::PointCloud<pcl::PointXYZI>::Ptr left_lane(new pcl::PointCloud<pcl::PointXYZI>);
+  pcl::PointCloud<pcl::PointXYZI>::Ptr right_lane(new pcl::PointCloud<pcl::PointXYZI>);
+  splitCloudDynamic(clustered_cloud, left_lane, right_lane);
+  
+  // 4. 곡선 기반 정렬 및 보간
+  sortAndInterpolate(left_lane, 1.0f);
+  sortAndInterpolate(right_lane, 1.0f);
 
-  const float y_gap  = 1.2f;
-  const float y_band = 0.8f;
-  splitCloudLeftRight(cloud_filtered_ptr, left_lane, right_lane, y_gap, y_band);
-
-  // 2) x 기준 정렬 & 샘플 간격 간단히 정리
-  sortByXAndThin(left_lane, 0.1f);
-  sortByXAndThin(right_lane, 0.1f);
-
-  // 3) 마커 생성 (색상/두께는 취향대로)
+  // 마커 생성 (포인트클라우드 -> 마커로 변환)
   auto left_marker = createLaneLineMarker(left_lane, "os_sensor", "lane", 0, 0.0f, 1.0f, 0.0f, 0.07);
   auto right_marker = createLaneLineMarker(right_lane, "os_sensor", "lane", 1, 1.0f, 0.8f, 0.0f, 0.07);
 
   // 포인트가 2개 이상일 때만 퍼블리시(한 점이면 선이 안 보임)
   if (left_marker.points.size() >= 2)  lane_line_left_pub_.publish(left_marker);
   if (right_marker.points.size() >= 2) lane_line_right_pub_.publish(right_marker);
+}
+
+// C++14 호환 splitCloudDynamic 함수
+void LaneDetector::splitCloudDynamic(
+    const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,
+    pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,
+    pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out)
+{
+  left_out->clear();
+  right_out->clear();
+  
+  // X 구간별로 나누어 처리
+  std::map<int, std::vector<pcl::PointXYZI>> x_bins;
+  
+  for (const auto& p : in->points) {
+      int x_bin = static_cast<int>(p.x / 2.0); // 2m 단위로 구분
+      x_bins[x_bin].push_back(p);
+  }
+  
+  // C++14 호환 반복문 사용
+  for (auto& bin_pair : x_bins) {
+      int x_bin = bin_pair.first;
+      std::vector<pcl::PointXYZI>& points = bin_pair.second;
+      
+      // Y값 기준 정렬
+      std::sort(points.begin(), points.end(),
+                [](const auto& a, const auto& b) { return a.y < b.y; });
+      
+      // 좌우 클러스터 찾기
+      std::vector<pcl::PointXYZI> left_cluster, right_cluster;
+      
+      for (const auto& p : points) {
+          if (p.y > 0.5) left_cluster.push_back(p);
+          else if (p.y < -0.5) right_cluster.push_back(p);
+      }
+      
+      // 각 클러스터에서 대표점 선택
+      if (!left_cluster.empty()) {
+          // 가장 intensity가 높은 점들만 선택
+          std::sort(left_cluster.begin(), left_cluster.end(),
+                    [](const auto& a, const auto& b) { return a.intensity > b.intensity; });
+          for (int i = 0; i < std::min(3, (int)left_cluster.size()); i++) {
+              left_out->push_back(left_cluster[i]);
+          }
+      }
+      
+      if (!right_cluster.empty()) {
+          std::sort(right_cluster.begin(), right_cluster.end(),
+                    [](const auto& a, const auto& b) { return a.intensity > b.intensity; });
+          for (int i = 0; i < std::min(3, (int)right_cluster.size()); i++) {
+              right_out->push_back(right_cluster[i]);
+          }
+      }
+  }
+}
+
+// PCL 호환 sortAndInterpolate 함수
+void LaneDetector::sortAndInterpolate(
+  pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,
+  float max_gap)
+{
+  if (cloud->size() < 2) return;
+  
+  // X축 기준 정렬
+  std::sort(cloud->points.begin(), cloud->points.end(),
+           [](const auto& a, const auto& b) { return a.x < b.x; });
+  
+  // PCL 호환 벡터로 보간점 생성
+  pcl::PointCloud<pcl::PointXYZI> interpolated;
+  interpolated.points.reserve(cloud->size() * 2);
+  interpolated.points.push_back(cloud->points[0]);
+  
+  for (size_t i = 1; i < cloud->points.size(); i++) {
+      auto& prev = cloud->points[i-1];
+      auto& curr = cloud->points[i];
+      
+      float distance = std::sqrt(std::pow(curr.x - prev.x, 2) + 
+                                std::pow(curr.y - prev.y, 2));
+      
+      // 거리가 너무 크면 보간점 추가
+      if (distance > max_gap && distance < max_gap * 3) {
+          int num_points = static_cast<int>(distance / max_gap);
+          for (int j = 1; j < num_points; j++) {
+              pcl::PointXYZI interp_point;
+              float ratio = static_cast<float>(j) / num_points;
+              interp_point.x = prev.x + ratio * (curr.x - prev.x);
+              interp_point.y = prev.y + ratio * (curr.y - prev.y);
+              interp_point.z = prev.z + ratio * (curr.z - prev.z);
+              interp_point.intensity = prev.intensity;
+              interpolated.points.push_back(interp_point);
+          }
+      }
+      interpolated.points.push_back(curr);
+  }
+  
+  // PCL 포인트클라우드 전체 교체
+  *cloud = interpolated;
+}
+
+void LaneDetector::clusterAndFilter(
+  const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,
+  pcl::PointCloud<pcl::PointXYZI>::Ptr& out)
+{
+  out->clear();
+  
+  if (in->empty()) {
+      return;
+  }
+  
+  pcl::search::KdTree<pcl::PointXYZI>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZI>);
+  tree->setInputCloud(in);
+  
+  std::vector<pcl::PointIndices> cluster_indices;
+  pcl::EuclideanClusterExtraction<pcl::PointXYZI> ec;
+  ec.setClusterTolerance(0.5); // 50cm
+  ec.setMinClusterSize(5);
+  ec.setMaxClusterSize(1000);
+  ec.setSearchMethod(tree);
+  ec.setInputCloud(in);
+  ec.extract(cluster_indices);
+  
+  // 가장 큰 클러스터들만 유지
+  for (const auto& indices : cluster_indices) {
+      for (int idx : indices.indices) {
+          out->push_back(in->points[idx]);
+      }
+  }
 }
 
 visualization_msgs::Marker LaneDetector::createLaneLineMarker(
@@ -146,53 +266,7 @@ visualization_msgs::Marker LaneDetector::createLaneLineMarker(
     m.points.push_back(p);
   }
 
-  // 라인이 안 보이지 않게 적어도 2포인트 이상일 때만 쓰는 게 좋아요.
   return m;
-}
-
-void LaneDetector::splitCloudLeftRight(
-    const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,
-    pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,
-    pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,
-    float y_gap, float y_band)
-{
-  left_out->clear();
-  right_out->clear();
-  left_out->reserve(in->size());
-  right_out->reserve(in->size());
-
-  for (const auto& p : in->points) {
-    // 좌:  y_gap < y <= y_gap + y_band
-    if ( (p.y > y_gap) && (p.y <= y_gap+y_band) ) {
-      left_out->push_back(p);
-    }
-    // 우: -y_gap - y_band <= y < -y_gap
-    else if ( (p.y >= -y_gap-y_band) && (p.y <  -y_gap) ) {
-      right_out->push_back(p);
-    }
-  }
-}
-
-void LaneDetector::sortByXAndThin(
-    pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,
-    float min_dx)
-{
-  if (cloud->empty()) return;
-
-  std::sort(cloud->points.begin(), cloud->points.end(),
-            [](const pcl::PointXYZI& a, const pcl::PointXYZI& b){ return a.x < b.x; });
-
-  pcl::PointCloud<pcl::PointXYZI> thinned;
-  thinned.points.reserve(cloud->points.size());
-
-  float last_x = std::numeric_limits<float>::lowest();
-  for (const auto& p : cloud->points) {
-    if (thinned.points.empty() || (p.x - last_x) >= min_dx) {
-      thinned.points.push_back(p);
-      last_x = p.x;
-    }
-  }
-  *cloud = thinned;
 }
 
 pcl::PointCloud<pcl::PointXYZI>::Ptr LaneDetector::FilterCloud(const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,
@@ -286,10 +360,6 @@ std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>:
     if (inliers->indices.empty()) {
         std::cerr << "Could not estimate a planar model for the given dataset" << std::endl;
     }
-
-    /*auto endTime = std::chrono::steady_clock::now();
-    auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-    std::cout << "plane segmentation took " << elapsedTime.count() << " milliseconds" << std::endl;*/
 
     std::pair<typename pcl::PointCloud<pcl::PointXYZI>::Ptr, typename pcl::PointCloud<pcl::PointXYZI>::Ptr> segResult = SeparateClouds(inliers, cloud);
     return segResult;

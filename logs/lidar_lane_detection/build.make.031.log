@@ -1,0 +1,170 @@
+[  0%] Built target lidar_msgs_generate_messages_lisp
+[  0%] Built target std_srvs_generate_messages_eus
+[  0%] Built target lidar_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_eus
+[  0%] Built target lidar_msgs_generate_messages_eus
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target topic_tools_generate_messages_nodejs
+[  0%] Built target topic_tools_generate_messages_lisp
+[  0%] Built target lidar_msgs_generate_messages_cpp
+[  0%] Built target topic_tools_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target nodelet_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_cpp
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target pcl_msgs_generate_messages_cpp
+[  0%] Built target topic_tools_generate_messages_py
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[  0%] Built target bond_generate_messages_eus
+[  0%] Built target bond_generate_messages_cpp
+[  0%] Built target nodelet_topic_tools_gencfg
+[  0%] Built target bond_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target pcl_msgs_generate_messages_eus
+[  0%] Built target pcl_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_py
+[  0%] Built target topic_tools_generate_messages_cpp
+[  0%] Built target pcl_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target pcl_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target pcl_ros_gencfg
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target lidar_msgs_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_gencfg
+[  0%] Built target nodelet_generate_messages_cpp
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target nodelet_generate_messages_eus
+[  0%] Built target std_srvs_generate_messages_lisp
+[  0%] Built target bond_generate_messages_py
+[  0%] Built target nodelet_generate_messages_nodejs
+[  0%] Built target nodelet_generate_messages_py
+[  0%] Built target bond_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_nodejs
+[35m[1mScanning dependencies of target lane_detection[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/src/main.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o[0m
+In file included from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/main.cpp:6[m[K:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:69:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLaneDetector::[m[K’ on member ‘[01m[KsortAndInterpolate[m[K’ [[01;31m[K-fpermissive[m[K]
+   69 |   void [01;31m[KLaneDetector[m[K::sortAndInterpolate(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,float max_gap);
+      |        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:70:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLaneDetector::[m[K’ on member ‘[01m[KclusterAndFilter[m[K’ [[01;31m[K-fpermissive[m[K]
+   70 |   void [01;31m[KLaneDetector[m[K::clusterAndFilter(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& out)
+      |        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:70:127:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   70 |   void LaneDetector::clusterAndFilter(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& out[01;31m[K)[m[K
+      |                                                                                                                               [01;31m[K^[m[K
+      |                                                                                                                                [32m[K;[m[K
+In file included from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:69:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLaneDetector::[m[K’ on member ‘[01m[KsortAndInterpolate[m[K’ [[01;31m[K-fpermissive[m[K]
+   69 |   void [01;31m[KLaneDetector[m[K::sortAndInterpolate(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,float max_gap);
+      |        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:70:8:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KLaneDetector::[m[K’ on member ‘[01m[KclusterAndFilter[m[K’ [[01;31m[K-fpermissive[m[K]
+   70 |   void [01;31m[KLaneDetector[m[K::clusterAndFilter(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& out)
+      |        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:70:127:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   70 |   void LaneDetector::clusterAndFilter(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& out[01;31m[K)[m[K
+      |                                                                                                                               [01;31m[K^[m[K
+      |                                                                                                                                [32m[K;[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::OS1PointCloudCallback(const ConstPtr&)[m[K’:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:103:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kintensity_filtered[m[K’ was not declared in this scope
+  103 |   clusterAndFilter([01;31m[Kintensity_filtered[m[K, clustered_cloud);
+      |                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:115:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_marker[m[K’ was not declared in this scope; did you mean ‘[01m[Kleft_lane[m[K’?
+  115 |   if ([01;31m[Kleft_marker[m[K.points.size() >= 2)  lane_line_left_pub_.publish(left_marker);
+      |       [01;31m[K^~~~~~~~~~~[m[K
+      |       [32m[Kleft_lane[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:116:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_marker[m[K’ was not declared in this scope; did you mean ‘[01m[Kright_lane[m[K’?
+  116 |   if ([01;31m[Kright_marker[m[K.points.size() >= 2) lane_line_right_pub_.publish(right_marker);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[Kright_lane[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::splitCloudDynamic(const Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&, pcl::PointCloud<pcl::PointXYZI>::Ptr&)[m[K’:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:132:14:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  132 |   for (auto& [01;35m[K[[m[Kx_bin, points] : x_bins) {
+      |              [01;35m[K^[m[K
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::sortAndInterpolate(pcl::PointCloud<pcl::PointXYZI>::Ptr&, float)[m[K’:
+[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:201:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::vector<pcl::PointXYZI, Eigen::aligned_allocator<pcl::PointXYZI> >[m[K’ and ‘[01m[Kstd::vector<pcl::PointXYZI>[m[K’)
+  201 |   cloud->points = [01;31m[Kinterpolated[m[K;
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:72[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/math_fwd.hpp:26[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:15[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:8[m[K,
+                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/vector.tcc:198:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = pcl::PointXYZI; _Alloc = Eigen::aligned_allocator<pcl::PointXYZI>][m[K’
+  198 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/vector.tcc:199:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<pcl::PointXYZI>[m[K’ to ‘[01m[Kconst std::vector<pcl::PointXYZI, Eigen::aligned_allocator<pcl::PointXYZI> >&[m[K’
+  199 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/math_fwd.hpp:26[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:15[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:8[m[K,
+                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = pcl::PointXYZI; _Alloc = Eigen::aligned_allocator<pcl::PointXYZI>][m[K’
+  706 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::vector<pcl::PointXYZI, Eigen::aligned_allocator<pcl::PointXYZI> >&&[m[K’
+  706 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = pcl::PointXYZI; _Alloc = Eigen::aligned_allocator<pcl::PointXYZI>][m[K’
+  727 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::vector<pcl::PointXYZI>[m[K’ to ‘[01m[Kstd::initializer_list<pcl::PointXYZI>[m[K’
+  727 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+make[2]: *** [CMakeFiles/lane_detection.dir/build.make:63: CMakeFiles/lane_detection.dir/src/main.cpp.o] 오류 1
+make[2]: *** 끝나지 않은 작업을 기다리고 있습니다....
+make[2]: *** [CMakeFiles/lane_detection.dir/build.make:76: CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o] 오류 1
+make[1]: *** [CMakeFiles/Makefile2:2205: CMakeFiles/lane_detection.dir/all] 오류 2
+make: *** [Makefile:141: all] 오류 2

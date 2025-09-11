@@ -1,10 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/heven/lld_ws/devel/lib/lidar_lane_detection/lane_detection"
-  "/home/heven/lld_ws/devel/lib/lidar_lane_detection/lane_detection.pdb"
+  "/home/jungejblue/lld_ws/devel/lib/lidar_lane_detection/lane_detection"
+  "/home/jungejblue/lld_ws/devel/lib/lidar_lane_detection/lane_detection.pdb"
   "CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o"
-  "CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o.d"
   "CMakeFiles/lane_detection.dir/src/main.cpp.o"
-  "CMakeFiles/lane_detection.dir/src/main.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

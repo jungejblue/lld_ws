@@ -1,4 +1,4 @@
-prefix=/home/heven/lld_ws/install
+prefix=/home/jungejblue/lld_ws/install
 
 Name: lidar_msgs
 Description: Description of lidar_msgs

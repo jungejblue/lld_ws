@@ -1,8 +1,8 @@
-prefix=/home/heven/lld_ws/devel
+prefix=/home/jungejblue/lld_ws/devel
 
 Name: lidar_msgs
 Description: Description of lidar_msgs
 Version: 0.0.0
-Cflags: -I/home/heven/lld_ws/devel/include
+Cflags: -I/home/jungejblue/lld_ws/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime std_msgs geometry_msgs
