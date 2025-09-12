@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/jungejblue/lld_ws/build/lidar_lane_detection'
+export PWD='/home/heven/lld_ws/build/lidar_lane_detection'
