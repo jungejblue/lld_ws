@@ -19,12 +19,12 @@ add_custom_target(lidar_msgs_generate_messages ALL)
 
 get_filename_component(_filename "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg" NAME_WE)
 add_custom_target(_lidar_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lidar_msgs" "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg" "lidar_msgs/PointStamped:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lidar_msgs" "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg" "std_msgs/Header:lidar_msgs/PointStamped"
 )
 
 get_filename_component(_filename "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg" NAME_WE)
 add_custom_target(_lidar_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lidar_msgs" "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg" "lidar_msgs/PointStamped:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lidar_msgs" "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg" "std_msgs/Header:lidar_msgs/PointStamped"
 )
 
 get_filename_component(_filename "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg" NAME_WE)
@@ -56,13 +56,13 @@ add_custom_target(_lidar_msgs_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_cpp(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_cpp(lidar_msgs
@@ -129,13 +129,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lidar_msgs_generate_messages_cpp)
 _generate_msg_eus(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_eus(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_eus(lidar_msgs
@@ -202,13 +202,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lidar_msgs_generate_messages_eus)
 _generate_msg_lisp(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_lisp(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_lisp(lidar_msgs
@@ -275,13 +275,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lidar_msgs_generate_messages_lisp)
 _generate_msg_nodejs(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_nodejs(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_nodejs(lidar_msgs
@@ -348,13 +348,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lidar_msgs_generate_messages_nodejs
 _generate_msg_py(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Curb.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_py(lidar_msgs
   "/home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg"
   "${MSG_I_FLAGS}"
-  "/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/heven/lld_ws/src/lidar_msgs/msg/PointStamped.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lidar_msgs
 )
 _generate_msg_py(lidar_msgs

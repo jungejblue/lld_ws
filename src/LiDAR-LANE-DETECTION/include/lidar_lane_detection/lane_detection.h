@@ -42,9 +42,6 @@
 #include <time.h>
 #include <chrono>
 
-#include <visualization_msgs/Marker.h>
-#include <geometry_msgs/Point.h>
-
 #include <lidar_msgs/Lane.h>
 
 using namespace std;
@@ -56,7 +53,6 @@ class LaneDetector
 public:
   LaneDetector();
   ~LaneDetector();
-
 public:
   bool init();
 
@@ -65,17 +61,12 @@ public:
   pcl::PointCloud<pcl::PointXYZI>::Ptr FilterCloud(const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud, float filterRes, const Eigen::Vector4f& minPoint, const Eigen::Vector4f& maxPoint);
   std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr,pcl::PointCloud<pcl::PointXYZI>::Ptr> SeparateClouds(const pcl::PointIndices::Ptr& inliers, const  pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud);
   std::pair<pcl::PointCloud<pcl::PointXYZI>::Ptr, pcl::PointCloud<pcl::PointXYZI>::Ptr> SegmentPlane(const pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud, int maxIterations, float distanceThreshold);
-  visualization_msgs::Marker createLaneLineMarker(const pcl::PointCloud<pcl::PointXYZI>::Ptr& lane_pts,const std::string& frame_id,const std::string& ns, int id,float r, float g, float b,double width);
-  void splitCloudLeftRight(const pcl::PointCloud<pcl::PointXYZI>::Ptr& in,pcl::PointCloud<pcl::PointXYZI>::Ptr& left_out,pcl::PointCloud<pcl::PointXYZI>::Ptr& right_out,float deadband_y = 0.2f);
-  void sortByXAndThin(pcl::PointCloud<pcl::PointXYZI>::Ptr& cloud,float step);
 
 private:
   ros::Publisher origin_pub_;
   ros::Publisher lane_pub_;
   ros::Subscriber os1_sub_;
   ros::NodeHandle nh_;
-  ros::Publisher lane_line_left_pub_;
-  ros::Publisher lane_line_right_pub_;
 
   sensor_msgs::PointCloud2 ros_input_;
   sensor_msgs::PointCloud2 ros_output_;

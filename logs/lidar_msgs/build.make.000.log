@@ -1,76 +1,54 @@
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_PointStamped[0m
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_Lane[0m
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_box[0m
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_Curb[0m
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_SocketBox[0m
-[35m[1mScanning dependencies of target _lidar_msgs_generate_messages_check_deps_BoxInfo[0m
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_nodejs
-[  0%] Built target std_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [  0%] Built target geometry_msgs_generate_messages_py
 [  0%] Built target std_msgs_generate_messages_py
-[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_Curb
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_PointStamped
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_box
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_Lane
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_BoxInfo
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
-[  0%] Built target _lidar_msgs_generate_messages_check_deps_SocketBox
-[  0%] Built target std_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
-[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
 [  0%] Built target geometry_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages_py[0m
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages_nodejs[0m
-[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
 [  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target std_msgs_generate_messages_cpp
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages_eus[0m
-[  3%] [34m[1mGenerating Javascript code from lidar_msgs/Curb.msg[0m
-[  9%] [34m[1mGenerating Python from MSG lidar_msgs/PointStamped[0m
-[  9%] [34m[1mGenerating Python from MSG lidar_msgs/Lane[0m
-[ 12%] [34m[1mGenerating Javascript code from lidar_msgs/Lane.msg[0m
-[ 15%] [34m[1mGenerating Python from MSG lidar_msgs/box[0m
-[ 18%] [34m[1mGenerating Python from MSG lidar_msgs/Curb[0m
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages_lisp[0m
-[ 21%] [34m[1mGenerating EusLisp code from lidar_msgs/Curb.msg[0m
-[ 25%] [34m[1mGenerating Lisp code from lidar_msgs/Curb.msg[0m
-[ 28%] [34m[1mGenerating EusLisp code from lidar_msgs/Lane.msg[0m
-[ 31%] [34m[1mGenerating Javascript code from lidar_msgs/PointStamped.msg[0m
-[ 34%] [34m[1mGenerating Lisp code from lidar_msgs/Lane.msg[0m
-[ 37%] [34m[1mGenerating Javascript code from lidar_msgs/box.msg[0m
-[ 40%] [34m[1mGenerating EusLisp code from lidar_msgs/PointStamped.msg[0m
-[ 43%] [34m[1mGenerating Lisp code from lidar_msgs/PointStamped.msg[0m
-[ 46%] [34m[1mGenerating Python from MSG lidar_msgs/BoxInfo[0m
-[ 50%] [34m[1mGenerating EusLisp code from lidar_msgs/box.msg[0m
-[ 53%] [34m[1mGenerating Javascript code from lidar_msgs/BoxInfo.msg[0m
-[ 56%] [34m[1mGenerating Python from MSG lidar_msgs/SocketBox[0m
-[ 59%] [34m[1mGenerating EusLisp code from lidar_msgs/BoxInfo.msg[0m
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages_cpp[0m
-[ 62%] [34m[1mGenerating C++ code from lidar_msgs/Curb.msg[0m
-[ 65%] [34m[1mGenerating EusLisp code from lidar_msgs/SocketBox.msg[0m
-[ 68%] [34m[1mGenerating Lisp code from lidar_msgs/box.msg[0m
-[ 71%] [34m[1mGenerating Javascript code from lidar_msgs/SocketBox.msg[0m
-[ 75%] [34m[1mGenerating EusLisp manifest code for lidar_msgs[0m
-[ 78%] [34m[1mGenerating C++ code from lidar_msgs/Lane.msg[0m
-[ 81%] [34m[1mGenerating Lisp code from lidar_msgs/BoxInfo.msg[0m
-[ 81%] Built target lidar_msgs_generate_messages_nodejs
-[ 84%] [34m[1mGenerating Lisp code from lidar_msgs/SocketBox.msg[0m
-[ 87%] [34m[1mGenerating C++ code from lidar_msgs/PointStamped.msg[0m
-[ 90%] [34m[1mGenerating C++ code from lidar_msgs/box.msg[0m
-[ 93%] [34m[1mGenerating C++ code from lidar_msgs/BoxInfo.msg[0m
-[ 96%] [34m[1mGenerating Python msg __init__.py for lidar_msgs[0m
-[100%] [34m[1mGenerating C++ code from lidar_msgs/SocketBox.msg[0m
-[100%] Built target lidar_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_box
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_PointStamped
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_Curb
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_BoxInfo
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_Lane
+[  0%] Built target _lidar_msgs_generate_messages_check_deps_SocketBox
+[  3%] [34m[1mGenerating Python from MSG lidar_msgs/Curb[0m
+[  6%] [34m[1mGenerating Python from MSG lidar_msgs/Lane[0m
+[ 12%] [34m[1mGenerating C++ code from lidar_msgs/Lane.msg[0m
+[ 12%] [34m[1mGenerating C++ code from lidar_msgs/Curb.msg[0m
+[ 15%] [34m[1mGenerating Python from MSG lidar_msgs/PointStamped[0m
+[ 18%] [34m[1mGenerating Lisp code from lidar_msgs/Curb.msg[0m
+[ 21%] [34m[1mGenerating Lisp code from lidar_msgs/Lane.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from lidar_msgs/Curb.msg[0m
+[ 28%] [34m[1mGenerating EusLisp code from lidar_msgs/Curb.msg[0m
+[ 31%] [34m[1mGenerating Lisp code from lidar_msgs/PointStamped.msg[0m
+[ 34%] [34m[1mGenerating EusLisp code from lidar_msgs/BoxInfo.msg[0m
+[ 37%] [34m[1mGenerating Javascript code from lidar_msgs/PointStamped.msg[0m
+[ 40%] [34m[1mGenerating EusLisp code from lidar_msgs/Lane.msg[0m
+[ 62%] [34m[1mGenerating C++ code from lidar_msgs/box.msg[0m
+[ 75%] [34m[1mGenerating Javascript code from lidar_msgs/box.msg[0m
+[ 75%] [34m[1mGenerating C++ code from lidar_msgs/SocketBox.msg[0m
+[ 62%] [34m[1mGenerating EusLisp code from lidar_msgs/PointStamped.msg[0m
+[ 62%] [34m[1mGenerating Python from MSG lidar_msgs/BoxInfo[0m
+[ 62%] [34m[1mGenerating Python from MSG lidar_msgs/box[0m
+[ 62%] [34m[1mGenerating C++ code from lidar_msgs/PointStamped.msg[0m
+[ 62%] [34m[1mGenerating Python from MSG lidar_msgs/SocketBox[0m
+[ 84%] [34m[1mGenerating EusLisp code from lidar_msgs/box.msg[0m
+[ 84%] [34m[1mGenerating Javascript code from lidar_msgs/Lane.msg[0m
+[ 84%] [34m[1mGenerating C++ code from lidar_msgs/BoxInfo.msg[0m
+[ 84%] [34m[1mGenerating Lisp code from lidar_msgs/box.msg[0m
+[ 90%] [34m[1mGenerating EusLisp code from lidar_msgs/SocketBox.msg[0m
+[ 93%] [34m[1mGenerating Lisp code from lidar_msgs/BoxInfo.msg[0m
+[ 93%] [34m[1mGenerating Lisp code from lidar_msgs/SocketBox.msg[0m
+[ 90%] [34m[1mGenerating Javascript code from lidar_msgs/BoxInfo.msg[0m
+[ 93%] [34m[1mGenerating EusLisp manifest code for lidar_msgs[0m
+[ 96%] [34m[1mGenerating Javascript code from lidar_msgs/SocketBox.msg[0m
+[ 96%] Built target lidar_msgs_generate_messages_lisp
+[ 96%] Built target lidar_msgs_generate_messages_nodejs
+[ 96%] Built target lidar_msgs_generate_messages_cpp
+[100%] [34m[1mGenerating Python msg __init__.py for lidar_msgs[0m
 [100%] Built target lidar_msgs_generate_messages_py
-[100%] Built target lidar_msgs_generate_messages_cpp
 [100%] Built target lidar_msgs_generate_messages_eus
-[35m[1mScanning dependencies of target lidar_msgs_generate_messages[0m
 [100%] Built target lidar_msgs_generate_messages

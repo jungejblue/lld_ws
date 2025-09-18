@@ -67,7 +67,7 @@ include CMakeFiles/_lidar_msgs_generate_messages_check_deps_Lane.dir/compiler_de
 include CMakeFiles/_lidar_msgs_generate_messages_check_deps_Lane.dir/progress.make
 
 CMakeFiles/_lidar_msgs_generate_messages_check_deps_Lane:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lidar_msgs /home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg lidar_msgs/PointStamped:std_msgs/Header
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py lidar_msgs /home/heven/lld_ws/src/lidar_msgs/msg/Lane.msg std_msgs/Header:lidar_msgs/PointStamped
 
 _lidar_msgs_generate_messages_check_deps_Lane: CMakeFiles/_lidar_msgs_generate_messages_check_deps_Lane
 _lidar_msgs_generate_messages_check_deps_Lane: CMakeFiles/_lidar_msgs_generate_messages_check_deps_Lane.dir/build.make

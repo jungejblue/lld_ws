@@ -1,209 +1,91 @@
-[  0%] Built target visualization_msgs_generate_messages_eus
-[  0%] Built target lidar_msgs_generate_messages_nodejs
-[  0%] Built target visualization_msgs_generate_messages_lisp
-[  0%] Built target tf2_msgs_generate_messages_nodejs
-[  0%] Built target lidar_msgs_generate_messages_lisp
-[  0%] Built target visualization_msgs_generate_messages_nodejs
-[  0%] Built target std_srvs_generate_messages_eus
-[  0%] Built target lidar_msgs_generate_messages_eus
-[  0%] Built target actionlib_generate_messages_nodejs
-[  0%] Built target actionlib_generate_messages_py
-[  0%] Built target tf_generate_messages_nodejs
-[  0%] Built target tf_generate_messages_lisp
-[  0%] Built target actionlib_generate_messages_cpp
-[  0%] Built target tf2_msgs_generate_messages_lisp
-[  0%] Built target actionlib_msgs_generate_messages_py
-[  0%] Built target actionlib_msgs_generate_messages_cpp
-[  0%] Built target topic_tools_generate_messages_lisp
-[  0%] Built target lidar_msgs_generate_messages_cpp
-[  0%] Built target topic_tools_generate_messages_nodejs
-[  0%] Built target tf_generate_messages_cpp
-[  0%] Built target topic_tools_generate_messages_eus
-[  0%] Built target geometry_msgs_generate_messages_eus
-[  0%] Built target std_msgs_generate_messages_cpp
-[  0%] Built target roscpp_generate_messages_eus
-[  0%] Built target actionlib_msgs_generate_messages_eus
-[  0%] Built target nodelet_generate_messages_lisp
-[  0%] Built target dynamic_reconfigure_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_nodejs
-[  0%] Built target roscpp_generate_messages_lisp
-[  0%] Built target std_msgs_generate_messages_lisp
-[  0%] Built target std_srvs_generate_messages_cpp
-[  0%] Built target actionlib_generate_messages_lisp
-[  0%] Built target rosgraph_msgs_generate_messages_py
-[  0%] Built target tf_generate_messages_eus
-[  0%] Built target rosgraph_msgs_generate_messages_lisp
-[  0%] Built target std_msgs_generate_messages_eus
-[  0%] Built target roscpp_generate_messages_nodejs
-[  0%] Built target actionlib_msgs_generate_messages_nodejs
-[  0%] Built target tf_generate_messages_py
-[  0%] Built target actionlib_msgs_generate_messages_lisp
-[  0%] Built target sensor_msgs_generate_messages_cpp
-[  0%] Built target geometry_msgs_generate_messages_lisp
-[  0%] Built target topic_tools_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_py
-[  0%] Built target geometry_msgs_generate_messages_py
-[  0%] Built target roscpp_generate_messages_cpp
-[  0%] Built target pcl_msgs_generate_messages_cpp
-[  0%] Built target tf2_msgs_generate_messages_eus
-[  0%] Built target sensor_msgs_generate_messages_nodejs
-[  0%] Built target bond_generate_messages_eus
-[  0%] Built target nodelet_topic_tools_gencfg
-[  0%] Built target bond_generate_messages_cpp
-[  0%] Built target visualization_msgs_generate_messages_cpp
-[  0%] Built target tf2_msgs_generate_messages_py
-[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
-[  0%] Built target sensor_msgs_generate_messages_py
-[  0%] Built target pcl_msgs_generate_messages_eus
-[  0%] Built target visualization_msgs_generate_messages_py
-[  0%] Built target topic_tools_generate_messages_cpp
-[  0%] Built target sensor_msgs_generate_messages_lisp
 [  0%] Built target sensor_msgs_generate_messages_eus
-[  0%] Built target pcl_msgs_generate_messages_lisp
-[  0%] Built target bond_generate_messages_lisp
+[  0%] Built target pcl_msgs_generate_messages_eus
+[  0%] Built target pcl_msgs_generate_messages_cpp
+[  0%] Built target lidar_msgs_generate_messages_py
 [  0%] Built target pcl_msgs_generate_messages_nodejs
-[  0%] Built target actionlib_generate_messages_eus
-[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target pcl_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_cpp
 [  0%] Built target pcl_msgs_generate_messages_py
 [  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
 [  0%] Built target rosgraph_msgs_generate_messages_cpp
-[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
 [  0%] Built target rosgraph_msgs_generate_messages_eus
 [  0%] Built target pcl_ros_gencfg
-[  0%] Built target rosgraph_msgs_generate_messages_nodejs
-[  0%] Built target lidar_msgs_generate_messages_py
-[  0%] Built target dynamic_reconfigure_generate_messages_cpp
 [  0%] Built target dynamic_reconfigure_generate_messages_eus
-[  0%] Built target geometry_msgs_generate_messages_nodejs
 [  0%] Built target dynamic_reconfigure_gencfg
-[  0%] Built target nodelet_generate_messages_cpp
-[  0%] Built target tf2_msgs_generate_messages_cpp
-[  0%] Built target dynamic_reconfigure_generate_messages_lisp
-[  0%] Built target std_srvs_generate_messages_lisp
-[  0%] Built target nodelet_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
 [  0%] Built target nodelet_generate_messages_nodejs
 [  0%] Built target nodelet_generate_messages_eus
-[  0%] Built target bond_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target nodelet_generate_messages_lisp
+[  0%] Built target nodelet_generate_messages_cpp
+[  0%] Built target nodelet_generate_messages_py
+[  0%] Built target bond_generate_messages_cpp
 [  0%] Built target bond_generate_messages_nodejs
+[  0%] Built target bond_generate_messages_eus
+[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_eus
+[  0%] Built target bond_generate_messages_lisp
+[  0%] Built target bond_generate_messages_py
+[  0%] Built target topic_tools_generate_messages_eus
+[  0%] Built target topic_tools_generate_messages_nodejs
+[  0%] Built target topic_tools_generate_messages_lisp
+[  0%] Built target topic_tools_generate_messages_py
+[  0%] Built target nodelet_topic_tools_gencfg
+[  0%] Built target topic_tools_generate_messages_cpp
+[  0%] Built target std_srvs_generate_messages_lisp
 [  0%] Built target std_srvs_generate_messages_nodejs
-[35m[1mScanning dependencies of target lane_detection[0m
+[  0%] Built target std_srvs_generate_messages_cpp
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target lidar_msgs_generate_messages_eus
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[  0%] Built target lidar_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_py
+[  0%] Built target lidar_msgs_generate_messages_cpp
+[  0%] Built target lidar_msgs_generate_messages_lisp
 [ 33%] [32mBuilding CXX object CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o[0m
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:[m[K In member function ‘[01m[Kvoid LaneDetector::OS1PointCloudCallback(const ConstPtr&)[m[K’:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KcopyPointCloud(pcl::PointCloud<pcl::PointXYZI>&)[m[K’
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;31m[K)[m[K;
-      |                                          [01;31m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:344:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid pcl::copyPointCloud(const pcl::PCLPointCloud2&, const std::vector<int>&, pcl::PCLPointCloud2&)[m[K’
-  344 |   [01;36m[KcopyPointCloud[m[K (const pcl::PCLPointCloud2 &cloud_in,
-      |   [01;36m[K^~~~~~~~~~~~~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:344:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:356:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid pcl::copyPointCloud(const pcl::PCLPointCloud2&, const std::vector<int, Eigen::aligned_allocator<int> >&, pcl::PCLPointCloud2&)[m[K’
-  356 |   [01;36m[KcopyPointCloud[m[K (const pcl::PCLPointCloud2 &cloud_in,
-      |   [01;36m[K^~~~~~~~~~~~~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:356:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:366:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid pcl::copyPointCloud(const pcl::PCLPointCloud2&, pcl::PCLPointCloud2&)[m[K’
-  366 |   [01;36m[KcopyPointCloud[m[K (const pcl::PCLPointCloud2 &cloud_in,
-      |   [01;36m[K^~~~~~~~~~~~~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/io.h:366:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:144:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT, class IndicesVectorAllocator> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const std::vector<int, IndicesVectorAllocator>&, pcl::PointCloud<PointT>&)[m[K’
-  144 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:144:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:191:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const pcl::PointIndices&, pcl::PointCloud<PointT>&)[m[K’
-  191 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:191:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:227:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const std::vector<pcl::PointIndices>&, pcl::PointCloud<PointT>&)[m[K’
-  227 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:227:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:118:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointInT, class PointOutT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, pcl::PointCloud<PointOutT>&)[m[K’
-  118 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointInT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:118:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:171:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointInT, class PointOutT, class IndicesVectorAllocator> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const std::vector<int, IndicesVectorAllocator>&, pcl::PointCloud<PointOutT>&)[m[K’
-  171 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointInT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:171:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:218:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointInT, class PointOutT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const pcl::PointIndices&, pcl::PointCloud<PointOutT>&)[m[K’
-  218 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointInT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:218:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:267:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointInT, class PointOutT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, const std::vector<pcl::PointIndices>&, pcl::PointCloud<PointOutT>&)[m[K’
-  267 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointInT> &cloud_in,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:267:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-In file included from [01m[K/usr/include/pcl-1.10/pcl/common/io.h:586[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/file_io.h:41[m[K,
-                 from [01m[K/usr/include/pcl-1.10/pcl/io/pcd_io.h:44[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/include/lidar_lane_detection/lane_detection.h:20[m[K,
-                 from [01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:5[m[K:
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:339:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PointT> void pcl::copyPointCloud(const pcl::PointCloud<PointT>&, pcl::PointCloud<PointT>&, int, int, int, int, pcl::InterpolationType, const PointT&)[m[K’
-  339 | [01;36m[Kpcl[m[K::copyPointCloud (const pcl::PointCloud<PointT> &cloud_in, pcl::PointCloud<PointT> &cloud_out,
-      | [01;36m[K^~~[m[K
-[01m[K/usr/include/pcl-1.10/pcl/common/impl/io.hpp:339:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
-[01m[K/home/jungejblue/lld_ws/src/LiDAR-LANE-DETECTION/src/lane_detection.cpp:63:42:[m[K [01;36m[Knote: [m[K  candidate expects 8 arguments, 1 provided
-   63 |   pcl::copyPointCloud(*cloud_filtered_ptr[01;36m[K)[m[K;
-      |                                          [01;36m[K^[m[K
-make[2]: *** [CMakeFiles/lane_detection.dir/build.make:76: CMakeFiles/lane_detection.dir/src/lane_detection.cpp.o] 오류 1
-make[1]: *** [CMakeFiles/Makefile2:2205: CMakeFiles/lane_detection.dir/all] 오류 2
-make: *** [Makefile:141: all] 오류 2
+[ 66%] [32m[1mLinking CXX executable /home/heven/lld_ws/devel/lib/lidar_lane_detection/lane_detection[0m
+[100%] Built target lane_detection
